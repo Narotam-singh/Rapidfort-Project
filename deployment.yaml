@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: rapidfort-project
-          image: narotam26/rapidfort-project:v1.0
+          image: narotam26/rapidfort-project
           ports:
             - containerPort: 5000
