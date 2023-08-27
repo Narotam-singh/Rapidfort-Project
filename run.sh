@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run -p 8080:28000 rapidfort-project:v1.0
+docker run -p 28000:8080 rapidfort-project:v1.0
