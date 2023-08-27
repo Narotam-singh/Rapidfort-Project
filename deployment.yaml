@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rapidfort-project-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rapidfort-project
+  template:
+    metadata:
+      labels:
+        app: rapidfort-project
+    spec:
+      containers:
+        - name: rapidfort-project
+          image: narotam26/rapidfort-project:v1.0
+          ports:
+            - containerPort: 28000

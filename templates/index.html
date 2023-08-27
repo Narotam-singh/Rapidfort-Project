@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Upload</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="upload-container">
+    <h1>
+      <span>File Upload</span>
+    </h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <br>
+      <br>
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+  <div>
+    {% if file_details %}
+    <h3>Information about the Uploaded File:</h2>
+    <p><strong>Filename:</strong> {{ file_details['filename'] }}</p>
+    <br>
+    <p><strong>Content Type:</strong> {{ file_details['content_type'] }}</p>
+    <br>
+    <p><strong>Size:</strong> {{ file_details['size'] }} bytes</p>
+    {% endif %}
+  </div>
+</body>
+</html>

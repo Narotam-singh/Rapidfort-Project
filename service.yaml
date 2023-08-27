@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rapidfort-project-service
+spec:
+  selector:
+    app: rapidfort-project
+  ports:
+    - protocol: TCP
+      port: 8080 # Exposed port on the service
+      targetPort: 28000 # Port your app is running on in the container
+  type: LoadBalancer
