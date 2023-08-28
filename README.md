@@ -29,11 +29,6 @@
   
   ```kubectl apply -f service.yaml```
   
-**Running the Application Locally**  
-
-  ```minikube service rapidfort-project```
-  
-  
   
 
 
