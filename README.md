@@ -2,7 +2,8 @@
 
 # Getting Started  
 **Prerequistes**  
-1. Flask (backend)
+1. HTML (Frontend)
+1. Flask (Backend)
 2. Docker (Containerisation)
 3. Kubectl ( for Local Kuberentes Deployment)
 
