@@ -4,7 +4,6 @@ import subprocess
 
 app = Flask(__name__)
 
-# Create 'uploads' folder if it doesn't exist
 if not os.path.exists('uploads'):
     os.makedirs('uploads')
 
@@ -16,7 +15,6 @@ def index():
 def upload_file():
     uploaded_file = request.files['file']
     if uploaded_file:
-        # Save the uploaded file to a temporary location
         file_path = os.path.join('uploads', uploaded_file.filename)
         uploaded_file.save(file_path)
 
@@ -26,10 +24,9 @@ def upload_file():
             'size': os.path.getsize(file_path)
         }
 
-        # Use the 'file' command to get additional information
         file_details['file_type'] = subprocess.getoutput(f'type {file_path}')
 
-        os.remove(file_path)  # Remove the uploaded file after processing
+        os.remove(file_path)
 
         return render_template('index.html', file_details=file_details)
     else:
