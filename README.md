@@ -3,9 +3,9 @@
 # Getting Started  
 **Prerequistes**  
 1. HTML (Frontend)
-1. Flask (Backend)
-2. Docker (Containerisation)
-3. Kubectl ( for Local Kuberentes Deployment)
+2. Flask (Backend)
+3. Docker (Containerisation)
+4. Kubectl ( for Local Kuberentes Deployment)
 
 **Cloning Repository**  
   
